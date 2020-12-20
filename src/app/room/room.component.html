@@ -1,0 +1,27 @@
+<div class="p-5 container-fluid">
+
+  <div class="row">
+    <div class="col-2" *ngFor="let card of rooms">
+      <app-room-card [card] = 'card'>
+
+      </app-room-card>
+    </div>
+    <div class="col-2">
+      <div class="card mb-3" style="width: 18rem;height: 13rem;">
+        <div class="card-body">
+          <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+            <label>Creating new room type</label>
+            <label>
+              Room Type Id:
+              <input type="text" formControlName="roomtypeid">
+            </label>
+            <label>
+              <button class="btn-primary" type="submit">Submit</button>
+            </label>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

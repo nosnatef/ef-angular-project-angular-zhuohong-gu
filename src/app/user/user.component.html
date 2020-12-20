@@ -1,0 +1,64 @@
+<div class="p-5 container-fluid">
+
+  <div class="row">
+    <div class="col-2" *ngFor="let card of Customers">
+      <app-user-card [card] = 'card'>
+        
+      </app-user-card>
+      
+    </div>
+    
+    
+    
+  </div>
+  <div clas="row">
+    <div class="card col-2">
+      <div class="card-body">
+        <div class="d-flex flex-column align-items-center text-center">
+          <img src="https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg" class="rounded-circle" width="150">
+          <div class="mt-3">
+            <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+              <label>Creating new customer</label>
+              <label>
+                Name:
+                <input type="text" formControlName="name">
+              </label>
+              <label>
+                Room Id:
+                <input type="text" formControlName="roomid">
+              </label>
+              <label>
+                Address:
+                <input type="text" formControlName="address">
+              </label>
+              <label>
+                Phone:
+                <input type="text" formControlName="phone">
+              </label>
+              <label>
+                Email Address: 
+                <input type="text" formControlName="email">
+              </label>
+              <label>
+                Total Persons:
+                <input type="text" formControlName="totalPersons">
+              </label>
+              <label>
+                Booking days:
+                <input type="text" formControlName="bookingDays">
+              </label>
+              <label>
+                Advance:
+                <input type="text" formControlName="advance">
+              </label>
+              <label>
+                <button class="btn-primary" type="submit">Submit</button>
+              </label>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
