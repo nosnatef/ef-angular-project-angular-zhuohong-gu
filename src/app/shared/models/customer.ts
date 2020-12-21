@@ -8,7 +8,7 @@ export interface Customer{
   address: string;
   phone: string;
   email: string;
-  checkin: Date;
+  checkin: string;
   totalPersons: number;
   bookingDays: number;
   advance: number;

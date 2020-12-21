@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ApiService } from '../core/services/api.service';
 import { RoomtypeService } from '../core/services/roomtype.service';
+import { RoomType } from '../shared/models/roomtype';
 
 @Component({
   selector: 'app-roomtype',
